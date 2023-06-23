@@ -18,7 +18,6 @@ public class VariablesTheme {
         System.out.println("Тип системы " + numBit + "Bit");
 
         System.out.println("2. Расчет стоимости товара со скидкой.");
-        //цена ручки 100 рб, книга 200 рб, На них действует скидка 11%
         byte sumDiscount = 11;
         byte penPrice = 100;
         short bookPrice = 200;
