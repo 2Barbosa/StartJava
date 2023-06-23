@@ -49,7 +49,6 @@ public class IfElseStatementTheme {
         }  
 
         System.out.println("4. Поиск одинаковых цифр в числах");
-        int c = 123, d = 223;
 
 
         System.out.println("5. Определение символа по его коду");
