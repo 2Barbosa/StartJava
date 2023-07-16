@@ -49,7 +49,25 @@ public class IfElseStatementTheme {
         }  
 
         System.out.println("4. Поиск одинаковых цифр в числах");
-
+        int num1 = 123;
+        int num2 = 223;
+        int singleDigit1 = num1 % 10;
+        int singleDigit2 = num2 % 10;
+        if (singleDigit1 == singleDigit2) {
+            System.out.println("Разряд единиц у чисел равен, " + singleDigit1);
+        } else {
+            System.out.println("Разряд единиц у чисел не равен");
+        }
+        if (num1 / 10 % 10 == num2 / 10 % 10) {
+            System.out.println("Разряд десятков " + num1 / 10 % 10 );
+        } else {
+            System.out.println("Разряд десятков у чисел не равен");
+        }
+        if(num1 / 100 == num2 / 100) {
+            System.out.println("Разряд сотен у чисел равен");
+        } else {
+            System.out.println("Разряд сотен у чисел не равен");
+        }
 
         System.out.println("5. Определение символа по его коду");
         char symbol = '\u0057';
@@ -80,6 +98,7 @@ public class IfElseStatementTheme {
         System.out.println("Сумма вклада: " + deposit + " руб."); 
         System.out.println("Начисленный %: " + interest + " руб."); 
         System.out.println("Итоговая сумма с %: " + totalAmount + " руб.");
+        }
 
         System.out.println("7. Определение оценки по предметам");
         double history = 59;
@@ -106,7 +125,8 @@ public class IfElseStatementTheme {
         } else { 
             System.out.println("Прибыли нет"); 
         }
-    }
+    
+
 
 
 
