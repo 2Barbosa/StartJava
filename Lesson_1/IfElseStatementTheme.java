@@ -82,50 +82,63 @@ public class IfElseStatementTheme {
         } 
 
         System.out.println("6. Подсчет суммы вклада");
-        double deposit = 300000;
+        double deposit = 301000;
         double interestRate = 0;
-        double interest = 0;
-        double totalAmount = 0;
-        if (deposit < 100000) { 
+        if (deposit < 100000)  
             interestRate = 0.05; 
-        } else if (deposit >= 100000 && deposit <= 300000) { 
+        else if (deposit >= 100000 && deposit <= 300000)  
             interestRate = 0.07; 
-        } else if (deposit > 300000) { 
+        else if (deposit > 300000)  
             interestRate = 0.1; 
-        } 
-        interest = deposit * interestRate; // вычисление процента 
-        totalAmount = deposit + interest; // вычисление итоговой суммы 
+        double totalAmount = 0;
+        double interest = 0;
+        interest = deposit * interestRate;
+        totalAmount = deposit + interest;
         System.out.println("Сумма вклада: " + deposit + " руб."); 
-        System.out.println("Начисленный %: " + interest + " руб."); 
+        System.out.println("Сумма начисленного %: " + interest + " руб."); 
         System.out.println("Итоговая сумма с %: " + totalAmount + " руб.");
-        }
-
+               
         System.out.println("7. Определение оценки по предметам");
-        double history = 59;
-        double programming = 91;
-        int history_mark = (history > 60) ? ((history > 73) ? 4 : 3) : 2;
-        int programming_mark = (programming > 60) ? ((programming > 73) ? 4 : 3) : 2;
-        System.out.println("Оценка по предмету \"История\": " + history_mark);
-        System.out.println("Оценка по предмету \"Программирование\": " + programming_mark);
-        // вычисление средней оценки
-        double simply_mark = (history_mark + programming_mark) / 2.0;
-        System.out.println("Средний балл оценок по предметам: " + simply_mark);
-        // вычисление среднего процента по предметам
-        double symply_interest = (history + programming) / 2.0;
-        System.out.println("Средний % по предметам: " + symply_interest);
-        }
-
+        double historyPercent = 59;
+        double programmingPercent = 91;
+        int historyMark = 0;
+        if (historyPercent > 91)
+            historyMark = 5;
+        else if (historyPercent > 73)
+            historyMark = 4;
+        else if (historyPercent > 60)
+            historyMark = 3;
+        else if (historyPercent <= 60)
+            historyMark = 2;
+        System.out.println("История - " + historyMark);
+        int programmingMark = 0;
+        if (programmingPercent > 91)
+            programmingMark = 5;
+        else if (programmingPercent > 73)
+            programmingMark = 4;
+        else if (programmingPercent > 60)
+            programmingMark = 3;
+        else if (programmingPercent <= 60)
+            programmingMark = 2;
+        System.out.println("Программирование - " + programmingMark);
+        System.out.println("Средний балл оценки по предметам - " + (historyMark + programmingMark) / 2);
+        System.out.println("Средний % по предметам - " + (historyPercent + programmingPercent) / 2);
+        
         System.out.println("8 Расчет прибыли за год");
         int rent = 5_000;
         int sales = 13_000;
         int costPrice = 9_000;
         int months = 12;
-        if((sales - ((rent + costPrice)) * months) > 0) {
-            System.out.println("Прибыль за год " + (sales - (rent + costPrice)) * months + "руб.");
-        } else { 
-            System.out.println("Прибыли нет"); 
+        int profit = ((sales - (rent + costPrice)) * months);
+        if (profit > 0) {
+            System.out.println("Прибыль за год " + profit + "руб.");
+        } else {
+            System.out.println("Прибыль за год " + profit + "руб.");
         }
+    }
+}
     
+
 
 
 
